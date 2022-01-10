@@ -13,6 +13,10 @@
 		0ED044CC278BD08600E08E80 /* items.json in Resources */ = {isa = PBXBuildFile; fileRef = 0ED044CB278BD08600E08E80 /* items.json */; };
 		0ED044CE278BD09500E08E80 /* exposition_universelle_1900.json in Resources */ = {isa = PBXBuildFile; fileRef = 0ED044CD278BD09500E08E80 /* exposition_universelle_1900.json */; };
 		C22C4D99278BC52F00398BCE /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = C22C4D98278BC52F00398BCE /* .swiftlint.yml */; };
+		C22C4DC2278BD42D00398BCE /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C4DC1278BD42D00398BCE /* JSONParser.swift */; };
+		C22C4DC3278BD42D00398BCE /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C4DC1278BD42D00398BCE /* JSONParser.swift */; };
+		C22C4DC5278BD4C800398BCE /* Exposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C4DC4278BD4C800398BCE /* Exposition.swift */; };
+		C22C4DC6278BD4C800398BCE /* Exposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C4DC4278BD4C800398BCE /* Exposition.swift */; };
 		C79FF4B52589F401005FB0FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79FF4B42589F401005FB0FD /* AppDelegate.swift */; };
 		C79FF4B72589F401005FB0FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79FF4B62589F401005FB0FD /* SceneDelegate.swift */; };
 		C79FF4B92589F401005FB0FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79FF4B82589F401005FB0FD /* ViewController.swift */; };
@@ -38,6 +42,8 @@
 		0ED044CB278BD08600E08E80 /* items.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = items.json; sourceTree = "<group>"; };
 		0ED044CD278BD09500E08E80 /* exposition_universelle_1900.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = exposition_universelle_1900.json; sourceTree = "<group>"; };
 		C22C4D98278BC52F00398BCE /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		C22C4DC1278BD42D00398BCE /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
+		C22C4DC4278BD4C800398BCE /* Exposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exposition.swift; sourceTree = "<group>"; };
 		C79FF4B12589F401005FB0FD /* Expo1900.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expo1900.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C79FF4B42589F401005FB0FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C79FF4B62589F401005FB0FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +85,7 @@
 			children = (
 				0ED044CD278BD09500E08E80 /* exposition_universelle_1900.json */,
 				0ED044CB278BD08600E08E80 /* items.json */,
+				C22C4DC4278BD4C800398BCE /* Exposition.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -114,6 +121,7 @@
 				C79FF4BD2589F404005FB0FD /* Assets.xcassets */,
 				C79FF4BF2589F404005FB0FD /* LaunchScreen.storyboard */,
 				C79FF4C22589F404005FB0FD /* Info.plist */,
+				C22C4DC1278BD42D00398BCE /* JSONParser.swift */,
 			);
 			path = Expo1900;
 			sourceTree = "<group>";
@@ -243,7 +251,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ED044C5278BCB1400E08E80 /* FileLoader.swift in Sources */,
+				C22C4DC6278BD4C800398BCE /* Exposition.swift in Sources */,
 				0ED044BA278BC98900E08E80 /* Expo1900Tests.swift in Sources */,
+				C22C4DC3278BD42D00398BCE /* JSONParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,7 +262,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C79FF4B92589F401005FB0FD /* ViewController.swift in Sources */,
+				C22C4DC2278BD42D00398BCE /* JSONParser.swift in Sources */,
 				C79FF4B52589F401005FB0FD /* AppDelegate.swift in Sources */,
+				C22C4DC5278BD4C800398BCE /* Exposition.swift in Sources */,
 				0ED044C4278BCB0C00E08E80 /* FileLoader.swift in Sources */,
 				C79FF4B72589F401005FB0FD /* SceneDelegate.swift in Sources */,
 			);
