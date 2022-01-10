@@ -10,6 +10,8 @@ import Foundation
 class FileLoader {
     static let shared: FileLoader = FileLoader()
     
+    private init() {}
+    
     func readFile(fileName: String, extensionType: String) -> Data? {
         guard let fileURL: URL = Bundle.main.url(forResource: fileName, withExtension: extensionType) else { return nil }
         
