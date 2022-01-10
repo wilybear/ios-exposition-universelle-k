@@ -1,5 +1,4 @@
 import Foundation
-import UIKit
 
 struct ExpositionData: Codable {
     let title: String
