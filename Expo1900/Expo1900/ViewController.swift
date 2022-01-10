@@ -9,17 +9,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        do {
-            entryItems = try decodeEntry(from: "items")
-            expositionData = try decodeEntry(from: "exposition_universelle_1900")
-        } catch {
-            print()
-        }
-        print(expositionData)
-        print(entryItems)
+        
+        entryItems = decodeEntry(from: "items")
+        expositionData = decodeEntry(from: "exposition_universelle_1900")
     }
     
-    func decodeEntry<T: Codable> (from: String) throws -> [T] {
+    func decodeEntry<T: Codable> (from: String) -> [T] {
         var result: [T] = []
         guard let items = NSDataAsset.init(name: from) else {
             return result
@@ -28,8 +23,13 @@ class ViewController: UIViewController {
         do {
             result = try decoder.decode([T].self, from: items.data)
         } catch {
-            let component = try decoder.decode(T.self, from: items.data)
-            result.append(component)
+            do {
+                let component = try decoder.decode(T.self, from: items.data)
+                result.append(component)
+            }
+            catch {
+                print(error)
+            }
         }
         return result
     }
