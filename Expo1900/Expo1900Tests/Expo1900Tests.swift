@@ -24,6 +24,22 @@ class Expo1900Tests: XCTestCase {
         XCTAssertNotNil(model)
     }
     
+    func test_items_dataset를_읽어올_수_있다() {
+        let jsonData: Data? = FileLoader.shared.readDataSet(fileName: "items")
+        XCTAssertNotNil(jsonData)
+    }
+    
+    func test_items_dataset를_객체로_파싱할_수_있다() {
+        guard let jsonData: Data = FileLoader.shared.readDataSet(fileName: "items") else {
+            XCTFail("error")
+            return
+        }
+        
+        let model: [ExpoItem]? = JSONParser.shared.decode([ExpoItem].self, from: jsonData)
+        
+        XCTAssertNotNil(model)
+    }
+    
     func test_items_json_데이터를_객체로_파싱할_수_있다() {
         guard let jsonData: Data = FileLoader.shared.readFile(fileName: "items", extensionType: "json") else {
             XCTFail("error")

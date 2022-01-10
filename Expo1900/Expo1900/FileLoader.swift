@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class FileLoader {
     static let shared: FileLoader = FileLoader()
@@ -21,5 +22,10 @@ class FileLoader {
         } catch {
             return nil
         }
+    }
+    
+    func readDataSet(fileName: String) -> Data? {
+        let asset: NSDataAsset? = NSDataAsset(name: "items")
+        return asset?.data
     }
 }
