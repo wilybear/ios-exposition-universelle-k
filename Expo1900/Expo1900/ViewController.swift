@@ -2,36 +2,29 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    var entryItems:[EntryData] = []
-    var expositionData: [ExpositionData] = []
+    var entryItems: [EntryData] = []
+    var expositionData: ExpositionData?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         
-        entryItems = decodeEntry(from: "items")
-        expositionData = decodeEntry(from: "exposition_universelle_1900")
+        entryItems = decodeEntry(type: [EntryData].self, from: "items") ?? entryItems
+        expositionData = decodeEntry(type: ExpositionData.self, from: "exposition_universelle_1900") ?? expositionData
     }
     
-    func decodeEntry<T: Codable> (from: String) -> [T] {
-        var result: [T] = []
+    func decodeEntry<T: Codable> (type: T.Type, from: String) -> T? {
         guard let items = NSDataAsset.init(name: from) else {
-            return result
+            return nil
         }
         let decoder = JSONDecoder()
         do {
-            result = try decoder.decode([T].self, from: items.data)
+            return try decoder.decode(type, from: items.data)
         } catch {
-            do {
-                let component = try decoder.decode(T.self, from: items.data)
-                result.append(component)
-            }
-            catch {
-                print(error)
-            }
+            print(error)
         }
-        return result
+        return nil
     }
 }
 
