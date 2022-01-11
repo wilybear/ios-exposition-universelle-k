@@ -9,6 +9,79 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Masterpiece Table Table View Controller-->
+        <scene sceneID="TSO-si-qf2">
+            <objects>
+                <tableViewController id="RDM-gG-JtL" customClass="MasterpieceTableTableViewController" customModule="Expo1900" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Ned-DM-pfM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="masterpieceCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="masterpieceCell" rowHeight="159" id="I4V-2g-kqO" customClass="MasterpieceTableViewCell" customModule="Expo1900" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="159"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I4V-2g-kqO" id="ooy-q4-nHK">
+                                    <rect key="frame" x="0.0" y="0.0" width="384.5" height="159"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KiE-qJ-dhk">
+                                            <rect key="frame" x="10" y="10" width="364.5" height="139"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bjC-mT-xWS">
+                                                    <rect key="frame" x="0.0" y="30" width="79.5" height="79.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="bjC-mT-xWS" secondAttribute="height" multiplier="1:1" id="nQu-v5-WOx"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lnw-ou-uV8">
+                                                    <rect key="frame" x="89.5" y="42" width="275" height="55"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MasterpieceTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7h-De-GgE">
+                                                            <rect key="frame" x="0.0" y="0.0" width="176" height="30"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Short Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9DO-ba-1sx">
+                                                            <rect key="frame" x="0.0" y="38" width="113.5" height="17"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bjC-mT-xWS" firstAttribute="width" secondItem="KiE-qJ-dhk" secondAttribute="width" multiplier="0.2" constant="6.5999999999999943" id="9gf-mJ-eW9"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="KiE-qJ-dhk" firstAttribute="top" secondItem="ooy-q4-nHK" secondAttribute="top" constant="10" id="WJu-Mf-UhL"/>
+                                        <constraint firstItem="KiE-qJ-dhk" firstAttribute="leading" secondItem="ooy-q4-nHK" secondAttribute="leading" constant="10" id="WRa-dz-2OK"/>
+                                        <constraint firstAttribute="trailing" secondItem="KiE-qJ-dhk" secondAttribute="trailing" constant="10" id="aM1-9q-BFP"/>
+                                        <constraint firstAttribute="bottom" secondItem="KiE-qJ-dhk" secondAttribute="bottom" constant="10" id="scT-vb-VzR"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="masterpieceImageView" destination="bjC-mT-xWS" id="zxI-XW-vQs"/>
+                                    <outlet property="masterpieceShortDescriptionLabel" destination="9DO-ba-1sx" id="ues-Bk-NtP"/>
+                                    <outlet property="masterpieceTitleLabel" destination="r7h-De-GgE" id="wTp-AB-SnK"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="RDM-gG-JtL" id="WbQ-aR-X90"/>
+                            <outlet property="delegate" destination="RDM-gG-JtL" id="Nys-2b-RcC"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="yRR-Zs-xPp"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U8A-Av-l71" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1023" y="38"/>
+        </scene>
         <!--Expo View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -113,6 +186,9 @@ non dictum mauris. Nulla at tellus sagittis, viverra est a, bibendum metus.</str
                                                                 <rect key="frame" x="61.5" y="19.5" width="156.5" height="31"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="한국의 출품작 보러 가기"/>
+                                                                <connections>
+                                                                    <segue destination="RDM-gG-JtL" kind="show" id="5x8-CL-RIP"/>
+                                                                </connections>
                                                             </button>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flag" translatesAutoresizingMaskIntoConstraints="NO" id="5Yu-9W-on8">
                                                                 <rect key="frame" x="238" y="0.0" width="41" height="70"/>

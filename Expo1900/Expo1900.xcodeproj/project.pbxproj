@@ -11,6 +11,8 @@
 		C206CF10278D735800911217 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C206CF0F278D735800911217 /* Int+Extension.swift */; };
 		C2130FC8278C1948009E2A8C /* Masterpiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2130FC7278C1948009E2A8C /* Masterpiece.swift */; };
 		C2130FCA278C1AF4009E2A8C /* InternationalExposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2130FC9278C1AF4009E2A8C /* InternationalExposition.swift */; };
+		C2DBF1FA278D772600B764D2 /* MasterpieceTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBF1F9278D772600B764D2 /* MasterpieceTableTableViewController.swift */; };
+		C2DBF1FC278D775600B764D2 /* MasterpieceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DBF1FB278D775600B764D2 /* MasterpieceTableViewCell.swift */; };
 		C79FF4B52589F401005FB0FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79FF4B42589F401005FB0FD /* AppDelegate.swift */; };
 		C79FF4B72589F401005FB0FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79FF4B62589F401005FB0FD /* SceneDelegate.swift */; };
 		C79FF4B92589F401005FB0FD /* ExpoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79FF4B82589F401005FB0FD /* ExpoViewController.swift */; };
@@ -24,6 +26,8 @@
 		C206CF0F278D735800911217 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		C2130FC7278C1948009E2A8C /* Masterpiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Masterpiece.swift; sourceTree = "<group>"; };
 		C2130FC9278C1AF4009E2A8C /* InternationalExposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternationalExposition.swift; sourceTree = "<group>"; };
+		C2DBF1F9278D772600B764D2 /* MasterpieceTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterpieceTableTableViewController.swift; sourceTree = "<group>"; };
+		C2DBF1FB278D775600B764D2 /* MasterpieceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterpieceTableViewCell.swift; sourceTree = "<group>"; };
 		C79FF4B12589F401005FB0FD /* Expo1900.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expo1900.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C79FF4B42589F401005FB0FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C79FF4B62589F401005FB0FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 				C79FF4B62589F401005FB0FD /* SceneDelegate.swift */,
 				C79FF4B82589F401005FB0FD /* ExpoViewController.swift */,
 				C79FF4BA2589F401005FB0FD /* Main.storyboard */,
+				C2DBF1FB278D775600B764D2 /* MasterpieceTableViewCell.swift */,
+				C2DBF1F9278D772600B764D2 /* MasterpieceTableTableViewController.swift */,
 				C79FF4BD2589F404005FB0FD /* Assets.xcassets */,
 				C79FF4BF2589F404005FB0FD /* LaunchScreen.storyboard */,
 				C79FF4C22589F404005FB0FD /* Info.plist */,
@@ -154,6 +160,8 @@
 				C2130FCA278C1AF4009E2A8C /* InternationalExposition.swift in Sources */,
 				C206CF10278D735800911217 /* Int+Extension.swift in Sources */,
 				C79FF4B52589F401005FB0FD /* AppDelegate.swift in Sources */,
+				C2DBF1FC278D775600B764D2 /* MasterpieceTableViewCell.swift in Sources */,
+				C2DBF1FA278D772600B764D2 /* MasterpieceTableTableViewController.swift in Sources */,
 				C2130FC8278C1948009E2A8C /* Masterpiece.swift in Sources */,
 				C79FF4B72589F401005FB0FD /* SceneDelegate.swift in Sources */,
 			);
