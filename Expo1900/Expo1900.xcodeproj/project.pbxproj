@@ -7,23 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C206CF0E278D68FC00911217 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C206CF0D278D68FC00911217 /* DataManager.swift */; };
+		C206CF10278D735800911217 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C206CF0F278D735800911217 /* Int+Extension.swift */; };
 		C2130FC8278C1948009E2A8C /* Masterpiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2130FC7278C1948009E2A8C /* Masterpiece.swift */; };
 		C2130FCA278C1AF4009E2A8C /* InternationalExposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2130FC9278C1AF4009E2A8C /* InternationalExposition.swift */; };
 		C79FF4B52589F401005FB0FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79FF4B42589F401005FB0FD /* AppDelegate.swift */; };
 		C79FF4B72589F401005FB0FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79FF4B62589F401005FB0FD /* SceneDelegate.swift */; };
-		C79FF4B92589F401005FB0FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79FF4B82589F401005FB0FD /* ViewController.swift */; };
+		C79FF4B92589F401005FB0FD /* ExpoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79FF4B82589F401005FB0FD /* ExpoViewController.swift */; };
 		C79FF4BC2589F401005FB0FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C79FF4BA2589F401005FB0FD /* Main.storyboard */; };
 		C79FF4BE2589F404005FB0FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C79FF4BD2589F404005FB0FD /* Assets.xcassets */; };
 		C79FF4C12589F404005FB0FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C79FF4BF2589F404005FB0FD /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C206CF0D278D68FC00911217 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		C206CF0F278D735800911217 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		C2130FC7278C1948009E2A8C /* Masterpiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Masterpiece.swift; sourceTree = "<group>"; };
 		C2130FC9278C1AF4009E2A8C /* InternationalExposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternationalExposition.swift; sourceTree = "<group>"; };
 		C79FF4B12589F401005FB0FD /* Expo1900.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expo1900.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C79FF4B42589F401005FB0FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C79FF4B62589F401005FB0FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C79FF4B82589F401005FB0FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C79FF4B82589F401005FB0FD /* ExpoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpoViewController.swift; sourceTree = "<group>"; };
 		C79FF4BB2589F401005FB0FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C79FF4BD2589F404005FB0FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C79FF4C02589F404005FB0FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,13 +66,15 @@
 			children = (
 				C79FF4B42589F401005FB0FD /* AppDelegate.swift */,
 				C79FF4B62589F401005FB0FD /* SceneDelegate.swift */,
-				C79FF4B82589F401005FB0FD /* ViewController.swift */,
+				C79FF4B82589F401005FB0FD /* ExpoViewController.swift */,
 				C79FF4BA2589F401005FB0FD /* Main.storyboard */,
 				C79FF4BD2589F404005FB0FD /* Assets.xcassets */,
 				C79FF4BF2589F404005FB0FD /* LaunchScreen.storyboard */,
 				C79FF4C22589F404005FB0FD /* Info.plist */,
 				C2130FC7278C1948009E2A8C /* Masterpiece.swift */,
 				C2130FC9278C1AF4009E2A8C /* InternationalExposition.swift */,
+				C206CF0D278D68FC00911217 /* DataManager.swift */,
+				C206CF0F278D735800911217 /* Int+Extension.swift */,
 			);
 			path = Expo1900;
 			sourceTree = "<group>";
@@ -143,8 +149,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C79FF4B92589F401005FB0FD /* ViewController.swift in Sources */,
+				C79FF4B92589F401005FB0FD /* ExpoViewController.swift in Sources */,
+				C206CF0E278D68FC00911217 /* DataManager.swift in Sources */,
 				C2130FCA278C1AF4009E2A8C /* InternationalExposition.swift in Sources */,
+				C206CF10278D735800911217 /* Int+Extension.swift in Sources */,
 				C79FF4B52589F401005FB0FD /* AppDelegate.swift in Sources */,
 				C2130FC8278C1948009E2A8C /* Masterpiece.swift in Sources */,
 				C79FF4B72589F401005FB0FD /* SceneDelegate.swift in Sources */,
