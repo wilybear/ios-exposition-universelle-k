@@ -13,11 +13,11 @@ class ExpoViewController: UIViewController {
     @IBOutlet weak var visitorCountLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var durationLabel: UILabel!
-    @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var descriptionTextView: UITextView!
     
     lazy var expoModel: InternationalExposition = {
         do {
-            return try DataManager.shared.getExposition()
+            return try JsonParser.shared.getExposition()
         } catch {
             fatalError("Failed to decode json data")
         }
@@ -25,6 +25,7 @@ class ExpoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "메인"
         configureLabelText()
     }
 
@@ -43,7 +44,7 @@ class ExpoViewController: UIViewController {
         visitorCountLabel.text = "\(expoModel.visitors.withCommas()) 명"
         locationLabel.text = expoModel.location
         durationLabel.text = expoModel.duration
-        contentLabel.text = expoModel.description
+        descriptionTextView.text = expoModel.description
     }
 }
 

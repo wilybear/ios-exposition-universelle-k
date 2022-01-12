@@ -1,5 +1,5 @@
 //
-//  MasterpieceTableViewCell.swift
+//  HeritageTableViewCell.swift
 //  Expo1900
 //
 //  Created by kakao on 2022/01/11.
@@ -7,11 +7,11 @@
 
 import UIKit
 
-class MasterpieceTableViewCell: UITableViewCell {
+class HeritageTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var masterpieceImageView: UIImageView!
-    @IBOutlet weak var masterpieceTitleLabel: UILabel!
-    @IBOutlet weak var masterpieceShortDescriptionLabel: UILabel!
+    @IBOutlet weak var heritageImageView: UIImageView!
+    @IBOutlet weak var heritageTitleLabel: UILabel!
+    @IBOutlet weak var heritageShortDescriptionLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
