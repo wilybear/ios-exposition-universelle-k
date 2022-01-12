@@ -17,7 +17,7 @@ class ExpoViewController: UIViewController {
     
     lazy var expoModel: InternationalExposition = {
         do {
-            return try JsonParser.shared.getExposition()
+            return try JsonParser.shared.fetchData(from: .expo1900)
         } catch {
             fatalError("Failed to decode json data")
         }

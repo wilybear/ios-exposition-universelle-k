@@ -12,7 +12,7 @@ class HeritageTableTableViewController: UITableViewController {
     let cellIdentifier = "heritageCell"
     lazy var heritages: [Heritage] = {
         do {
-            return try JsonParser.shared.getHeritages()
+            return try JsonParser.shared.fetchData(from: .expo1900Items)
         } catch {
             fatalError("Failed to decode json data")
         }

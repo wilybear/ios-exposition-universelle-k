@@ -18,6 +18,7 @@ class HeritageViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.title = heritage?.name
         configureHeritageViews()
+        configureHeritageImageViewRatioConstraint()
     }
     
     func configureHeritageViews(){
@@ -26,4 +27,9 @@ class HeritageViewController: UIViewController {
         heritageDescriptionTextView.text = heritage.description
     }
     
+    func configureHeritageImageViewRatioConstraint(){
+        guard let heritage = heritage ,let image = UIImage(named: heritage.imageName) else { return }
+        let imageRatio = image.size.width / image.size.height
+        heritageImageView.widthAnchor.constraint(equalTo: heritageImageView.heightAnchor, multiplier: imageRatio).isActive = true
+    }
 }

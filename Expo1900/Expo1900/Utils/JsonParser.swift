@@ -14,15 +14,16 @@ class JsonParser {
     
     private init() { }
     
-    func getExposition() throws -> InternationalExposition {
-        guard let jsonData = NSDataAsset(name: "expo_1900")?.data else { fatalError("Json file doesn't exist") }
-        let expositionModel = try jsonDecoder.decode(InternationalExposition.self, from: jsonData)
-        return expositionModel
+    func fetchData<T: Codable>(from fileName: JsonFileList) throws -> T{
+        guard let jsonData = NSDataAsset(name: fileName.rawValue)?.data else { fatalError("Json file doesn't exist") }
+        let data = try jsonDecoder.decode(T.self, from: jsonData)
+        return data
     }
     
-    func getHeritages() throws -> [Heritage] {
-        guard let jsonData = NSDataAsset(name: "expo_1900_items")?.data else { fatalError("Json file doesn't exist") }
-        let heritages = try jsonDecoder.decode([Heritage].self, from: jsonData)
-        return heritages
+    enum JsonFileList: String{
+        case expo1900 = "expo_1900"
+        case expo1900Items = "expo_1900_items"
     }
 }
+
+
