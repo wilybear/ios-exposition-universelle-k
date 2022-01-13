@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Heritage: Codable {
+struct Heritage: Decodable {
     let name: String
     let imageName: String
     let shortDescription: String

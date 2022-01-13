@@ -15,17 +15,21 @@ class ExpoViewController: UIViewController {
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
     
-    lazy var expoModel: InternationalExposition = {
+    private lazy var expo: InternationalExposition = {
         do {
             return try JsonParser.shared.fetchData(from: .expo1900)
         } catch {
-            fatalError("Failed to decode json data")
+            print(error.localizedDescription)
+            let errorExpo = InternationalExposition(title: "에러가 발생했습니다",
+                                                    visitors: 0,
+                                                    location: "Error",
+                                                    duration: "Error",description: error.localizedDescription)
+            return errorExpo
         }
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "메인"
         configureLabelText()
     }
 
@@ -39,12 +43,12 @@ class ExpoViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
-    func configureLabelText() {
-        titleLabel.text = expoModel.title
-        visitorCountLabel.text = "\(expoModel.visitors.withCommas()) 명"
-        locationLabel.text = expoModel.location
-        durationLabel.text = expoModel.duration
-        descriptionTextView.text = expoModel.description
+    private func configureLabelText() {
+        titleLabel.text = expo.title
+        visitorCountLabel.text = "\(expo.visitors.withCommas()) 명"
+        locationLabel.text = expo.location
+        durationLabel.text = expo.duration
+        descriptionTextView.text = expo.description
     }
 }
 

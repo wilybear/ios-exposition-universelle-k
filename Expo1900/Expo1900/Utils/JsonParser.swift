@@ -14,15 +14,30 @@ class JsonParser {
     
     private init() { }
     
-    func fetchData<T: Codable>(from fileName: JsonFileList) throws -> T{
-        guard let jsonData = NSDataAsset(name: fileName.rawValue)?.data else { fatalError("Json file doesn't exist") }
-        let data = try jsonDecoder.decode(T.self, from: jsonData)
-        return data
+    func fetchData<T: Decodable>(from fileName: JsonFileList) throws -> T {
+        guard let assetData = NSDataAsset(name: fileName.rawValue)?.data else {
+            throw JsonParserError.noMatchedAssetName(fileName: fileName.rawValue)
+        }
+        let fetchedData = try jsonDecoder.decode(T.self, from: assetData)
+        return fetchedData
     }
     
-    enum JsonFileList: String{
+    enum JsonFileList: String {
         case expo1900 = "expo_1900"
         case expo1900Items = "expo_1900_items"
+    }
+}
+
+enum JsonParserError: Error {
+    case noMatchedAssetName(fileName: String)
+}
+
+extension JsonParserError: LocalizedError {
+    var errorDescription: String? {
+        switch self {
+        case .noMatchedAssetName(fileName: let name):
+            return "\(name) file doesn't exist"
+        }
     }
 }
 

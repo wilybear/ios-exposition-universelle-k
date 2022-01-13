@@ -13,12 +13,9 @@ class HeritageTableViewCell: UITableViewCell {
     @IBOutlet weak var heritageTitleLabel: UILabel!
     @IBOutlet weak var heritageShortDescriptionLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    func configureWithHeritage(_ heritage: Heritage) {
+        heritageImageView.image = UIImage(named: heritage.imageName)
+        heritageTitleLabel.text = heritage.name
+        heritageShortDescriptionLabel.text = heritage.shortDescription
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-
 }

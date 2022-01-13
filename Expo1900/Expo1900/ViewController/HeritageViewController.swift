@@ -21,13 +21,13 @@ class HeritageViewController: UIViewController {
         configureHeritageImageViewRatioConstraint()
     }
     
-    func configureHeritageViews(){
+    private func configureHeritageViews() {
         guard let heritage = heritage else { return }
         heritageImageView.image = UIImage(named: heritage.imageName)
         heritageDescriptionTextView.text = heritage.description
     }
     
-    func configureHeritageImageViewRatioConstraint(){
+    private func configureHeritageImageViewRatioConstraint() {
         guard let heritage = heritage ,let image = UIImage(named: heritage.imageName) else { return }
         let imageRatio = image.size.width / image.size.height
         heritageImageView.widthAnchor.constraint(equalTo: heritageImageView.heightAnchor, multiplier: imageRatio).isActive = true

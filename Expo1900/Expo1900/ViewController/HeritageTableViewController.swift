@@ -1,5 +1,5 @@
 //
-//  HeritageTableTableViewController.swift
+//  HeritageTableViewController.swift
 //  Expo1900
 //
 //  Created by kakao on 2022/01/11.
@@ -7,20 +7,26 @@
 
 import UIKit
 
-class HeritageTableTableViewController: UITableViewController {
+class HeritageTableViewController: UITableViewController {
     
-    let cellIdentifier = "heritageCell"
-    lazy var heritages: [Heritage] = {
+    private let cellIdentifier = "heritageCell"
+    private lazy var heritages: [Heritage] = {
         do {
             return try JsonParser.shared.fetchData(from: .expo1900Items)
         } catch {
-            fatalError("Failed to decode json data")
+            print(error.localizedDescription)
+            let alert = UIAlertController(title: "에러 발생", message: error.localizedDescription, preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "확인", style: .default) { _ in
+                self.navigationController?.popViewController(animated: true)
+            }
+            alert.addAction(alertAction)
+            present(alert, animated: true, completion: nil)
+            return []
         }
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "한국의 출품작"
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -32,9 +38,7 @@ class HeritageTableTableViewController: UITableViewController {
             fatalError("No matched reusable cell!")
         }
         let heritage = heritages[indexPath.row]
-        cell.heritageImageView.image = UIImage(named: heritage.imageName)
-        cell.heritageTitleLabel.text = heritage.name
-        cell.heritageShortDescriptionLabel.text = heritage.shortDescription
+        cell.configureWithHeritage(heritage)
         
         return cell
     }
