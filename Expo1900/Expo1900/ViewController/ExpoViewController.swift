@@ -28,6 +28,10 @@ class ExpoViewController: UIViewController {
         }
     }()
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         configureLabelText()
