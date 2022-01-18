@@ -39,6 +39,7 @@ class ExpoViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     

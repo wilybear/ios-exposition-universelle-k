@@ -71,12 +71,12 @@ class HeritageViewController: UIViewController {
     }
     
     private func switchConstraintsByOrientation() {
-        if UIDevice.current.orientation.isPortrait {
-            NSLayoutConstraint.deactivate(landscapeConstraints)
-            NSLayoutConstraint.activate(portraitConstraints)
-        } else {
+        if UIDevice.current.orientation.isLandscape {
             NSLayoutConstraint.deactivate(portraitConstraints)
             NSLayoutConstraint.activate(landscapeConstraints)
+        } else {
+            NSLayoutConstraint.deactivate(landscapeConstraints)
+            NSLayoutConstraint.activate(portraitConstraints)
         }
     }
 }
